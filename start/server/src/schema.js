@@ -64,8 +64,8 @@ const typeDefs = gql`
   }
 
   type Mission {
-    # ... with rest of schema
-    missionPatch(mission: String, size: PatchSize): String
+    name: String
+    missionPatch(size: PatchSize): String
   }
 
   enum PatchSize {
