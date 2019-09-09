@@ -12,7 +12,7 @@ const LOGIN_USER = gql`
 
 export default function Login() {
   const client = useApolloClient();
-  const [login, { data }] = useMutation(
+  const [login, { loading, error }] = useMutation(
     LOGIN_USER,
     {
       onCompleted({ login }) {
